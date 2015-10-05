@@ -37,6 +37,9 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY default.conf /etc/nginx/conf.d/default.conf
 
+COPY templates/typo3/AdditionalConfigurations.php /var/www/site/typo3conf/AdditionalConfigurations.php
+COPY templates/typo3/Secrets.php /var/www/site/typo3conf/Secrets.php
+
 COPY start.sh /start.sh
 
 RUN chmod 0755 /start.sh
